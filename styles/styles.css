@@ -23,17 +23,17 @@ html, body{
 }
 
 .nav li{
-    display: inline;
+    display: inline-flex;
 }
 
 .nav a {
     display: inline-block;
-    padding: .3em;
+    padding: .5em;
     color: white;
     text-decoration: none;;
 }
 
-.nav a:hover {
+.nav li:hover {
     background-color:rgba(83, 83, 83, 0.3);
 }
 
@@ -187,5 +187,64 @@ html, body{
 
 .btn-danger:hover {
     background-color: darkred;
+}
+/* this is not a usable style. only present for containing examples of how to work
+with flex boxes */ 
+.flexbox-container1 {
+    display: flex;
+    
+    width:50%;/*how much of the screen does the style use?*/
+    /* No margin top to bottom but keeps 25% of the screen to the left and right sides 
+    of the style/item */
+    margin:0 25%;
+    background-color: #beaa36;
+    /** Helps us determine where our content appears
+    within our flexbox know that flexbox works like a graph with (0,0) in the center.
+    So center will center our content in the middle of the box, start will put it on the left,
+    end will put it on the right, space-evenly will evenly space them, space-around will
+    evenly space on all sides*/
+    justify-content: space-evenly;
+    align-items: center;/* centers items along the main axis*/
+    align-content: center; /* centers content along the main axis*/
+    flex-wrap: wrap;/* multiple rows when screen too small to keep on one line*/
+    /* changes flexbox layout so that we have column (vertical) arranging rather than row based*/
+    flex-direction: column;
+    flex-shrink:0;/* stops the box from shrinking as the screen size changes */
+    flex-grow:1; /*fill remaining space along main axis I think?*/
+    /* flex-basis
+    Tells our flexbox where to start growing from(0 is saying like it were 0 pixels wide */
+    flex-basis: 0; 
+    /* alters the individual box's alignment */
+    align-self: center;
+    /* order allows us to change the order in which flexbox items appear in the flexbox*/
+    order: 0;
+}
+
+.flexbox-container {
+    display: flex;
+    background-color: #beaa36;
+
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid rgb(126, 123, 123);
+    background-color: #c5b6b6;
+}
+
+.flexbox-item-1 {
+    min-height: 100px;
+    
+}
+
+.flexbox-item-2 {
+    min-height: 200px;
+    
+}
+
+.flexbox-item-3 {
+    min-height:400px;
+    
 }
 
