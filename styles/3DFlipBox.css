@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;/* makes the width include padding and the width inside of the object*/
+}
+/* applying perspective to all body elements*/
+body {
+    perspective: 800px;/* gives distance from our content so viewers can get 3D perspective*/
+}
+
+.btn {
+    position: relative;
+    height: 150px;
+    width:450px;
+    transform-style: preserve-3d;/* stops button children from spasming when we rotate on hover*/
+    /*  allows us to actually see the transform occur over time
+    transform targets the type of action or change specifically it will be rotating in this case
+    300ms is just the time it will take to finsih
+    and ease-in-out is just some modifier stuff for changing the rate at whcih it rotates depending
+    on how far the rotation is in the process of rotating. 3 main parts, beginning, middle, end*/
+    transition:transform 300ms ease-in-out;
+    transform: translateZ(-75px);
+}
+
+.btn:hover {
+    transform:rotateX(-90deg) translateY(75px);
+}
+
+.side {
+    position: absolute;
+    backface-visibility: hidden; /*hides the backside of the button*/
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.default-side {
+    background-color: white;
+    border: 10px solid #069;
+    color: #069;
+    transform: translateZ(75px);
+}
+
+.hover-side {
+    color:white;
+    background-color: #069;
+    /* like normal transform rotation stuff rotates on X axis 90 degrees */
+    /* moves or translates our objects 3D world coordinates along the Z axis*/
+    /* note that whether we do this in one transform call like this or on two seperate calls changes
+    the outcome completetly, same line creates the box effect we are looking for while two calls
+    glitches out completely and gets a very undesirable effect*/
+    transform: rotateX(90deg) translateZ(75px);
+}
