@@ -52,6 +52,8 @@ above
     box-shadow: 0 0 20px black;  
 }
 
+
+
 .checkbox-container input[type='checkbox']:checked + label::before {
     content: '\002714';/* id for checkmark icon */
     background-color: #27AE60;
@@ -59,5 +61,16 @@ above
     justify-content: center;/* centers along main axis*/
     align-items: center;/* finishes centering by vertically centering.. likely changes situationally */
     color: white;
+}
+
+.checkbox-container input[type='checkbox']:disabled + label,
+.checkbox-container input[type='checkbox']:disabled {
+    color: #aaa;
+    cursor: default;
+}
+
+.checkbox-container input[type='checkbox']:disabled + label::before {
+    background-color: #ccc;
+    border-color: #999;
 }
 
