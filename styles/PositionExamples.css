@@ -1,0 +1,41 @@
+.parent{
+    position: relative;
+    background-color: azure;
+    height:3000px;
+}
+
+.child-one{
+    /*acts exaclty like static positioning exact you can change
+    the top left right and bottom positioning for example
+    Note..: You can get overlapped elements using this because 
+    its moving relative to its static positon*/
+    position:relative;
+    left: 10px;
+    top:10px;
+}
+
+.child-two {
+    /* completely removes the element from the document flow and everything else renders as if the
+    absolute element didn't exist at all
+    useful for sticking items in certain spots when you dont want other elements to move in
+    response to it
+    relative positioned items can have absolute items in it and the absolute will be absolutely 
+    positioned inside it*/
+    position:absolute;
+}
+
+.child-three {
+/* fixed position elements are always fixed based on the entire html document(body)
+Works well for scrolling because it sticks to the screen rather than page*/
+position: fixed;
+top:0;
+right:0;
+}
+.child-four {
+    /* As soon as it would scroll outside of the page it becomes fixed, otherwise it acts relative
+    so basically static with the ability to adjust positioning
+    Note that in order for it to become fixed however you have to define what top left bottom etc are
+    so if its the very top of the screen then top:0*/
+    position: sticky;
+    top:0;
+}

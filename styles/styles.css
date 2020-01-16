@@ -13,57 +13,86 @@
     color:black;
 }
 
+.child-three {
+    /* fixed position elements are always fixed based on the entire html document(body)
+    Works well for scrolling because it sticks to the screen rather than page*/
+    position: sticky;
+    top:0;
+    right:0;
+    }
+
 html, body{
     margin:0;
     padding:0;
     background-color: rgb(224, 227, 230);
 }
+
 .nav ul{
     margin:0;
+    
 }
 
 .nav li{
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .nav a {
-    display: inline-block;
+    display: inline-flex;
     padding: .5em;
     color: white;
-    text-decoration: none;;
+    text-decoration: none;
+    
 }
+
 
 .nav li:hover {
     background-color:rgba(83, 83, 83, 0.3);
 }
 
 .main-nav {
+    width: 100%;
+    position: fixed;
+    top:1px;
     text-align: center;
-    font-size: 15px;
+    font-size: 1em;
     font-weight:lighter;
-    border-bottom: 1px solid rgba(255, 255, 255, .3);
-}
-.main-nav li {
-    padding: 0 3%;
+    border-top: 1px solid rgba(255, 255, 255, 0.452);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.842);
+    background-color: rgba(5, 5, 5, 0.596);
+    
 }
 
+
 .main-header{
+    width:100%;
+    height:37vw;
     background-color: rgba(165, 160, 160, 0.95);
     background-image: url('../images/snowbuilding.jfif');
     background-blend-mode: multiply;
     background-size: cover;
-    padding-bottom: 500px;
-    padding-left:2%;
-    padding-right:2%;
+    /* padding-bottom: 450px; */
+    /* padding-left:2%;
+    padding-right:2%; */
 }
 
-.site-name {
-    text-align: center;
+.site-logo {
     margin: 0;
-    font-size: 4em;
+    /* fun text coloring*/ 
+    background: linear-gradient(60deg, 
+    red, rgb(45, 161, 74), rgb(189, 55, 133), rgb(125, 156, 196), red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,.2);
+    /**/
+    font-size: 3em;
     font-family: "Booter";
     font-weight: normal;
-    color: white;
+    /* position: fixed; */
+    left:.1em;
+    top:0em;
 }
 
 
@@ -96,7 +125,7 @@ html, body{
 .container{
     max-width: 900px;
     margin: 0 auto;
-    padding:0 1.5em;
+    padding: 0 1.5em;
 }
 
 .section-header{
@@ -116,7 +145,7 @@ html, body{
 }
 
 .main-footer {
-    background-color: rgb(155, 172, 218);
+    background-color: rgb(5, 5, 5);
     color:white;
     padding: .25em 0;
 }
@@ -221,14 +250,22 @@ with flex boxes */
 }
 
 .flexbox-container {
+    height: 3em;
     display: flex;
+    justify-content: center;
+    align-items: center ;
     background-color: #beaa36;
 
 }
 
+.flexbox-container-main-nav {
+    height: 3em;
+    display: flex;
+}
+
 .flexbox-item {
     width: 200px;
-    margin: 10px;
+    margin: 0px;
     border: 3px solid rgb(126, 123, 123);
     background-color: #c5b6b6;
 }
