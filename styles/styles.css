@@ -61,22 +61,29 @@ html, body{
     font-weight:lighter;
     border-top: 1px solid rgba(255, 255, 255, 0.452);
     border-bottom: 1px solid rgba(255, 255, 255, 0.842);
-    background-color: rgba(5, 5, 5, 0.596);
+    background-color: rgba(0, 0, 0, 0.7);
     
+}
+
+.main-nav-home{
+    background-color: rgba(0, 0, 0, 0.596);
 }
 
 
 .main-header{
     width:100%;
-    height:37vw;
     background-color: rgba(165, 160, 160, 0.95);
-    background-image: url('../images/snowbuilding.jfif');
+}
+
+.main-header-home{
+    height:37vw;
     background-blend-mode: multiply;
     background-size: cover;
-    /* padding-bottom: 450px; */
-    /* padding-left:2%;
-    padding-right:2%; */
+    background-image: url('../images/snowbuilding.jfif');
 }
+
+
+
 
 .site-logo {
     margin: 0;
@@ -148,11 +155,16 @@ html, body{
     background-color: rgb(5, 5, 5);
     color:white;
     padding: .25em 0;
+    width: 100%;
+    margin-top: 5.5em;
+    bottom: 0;
 }
 
 .main-footer-container {
     display: flex;
     align-items: center;
+
+
 }
 
 .main-footer-container ul {
@@ -250,11 +262,46 @@ with flex boxes */
 }
 
 .flexbox-container {
-    height: 3em;
     display: flex;
-    justify-content: center;
-    align-items: center ;
+    /* justify-content: center;
+    align-items: center ; */
     background-color: #beaa36;
+
+}
+.flexbox-vocab-container{
+    margin-top:7em;
+    width: 100%;
+    height:800px;
+    display: flex;
+    justify-content: left;
+    /* align-items: flex-start ; */
+    background-color: #beaa36;
+}
+
+.flexbox-vocab-item{
+    display: flex;
+    margin:10px;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 400px;
+    font-size: 2em;
+    background-color: mediumturquoise;
+    border: 3px solid mediumvioletred;
+    border-radius: 7%;
+    text-align: center;
+
+}
+
+.flexbox-vocab-item-word{
+    justify-content: left;
+    align-items: flex-start;
+    padding-left:10px;
+    padding-top: 20px;
+
+}
+
+.flexbox-vocab-item-meaning{
 
 }
 
@@ -270,18 +317,9 @@ with flex boxes */
     background-color: #c5b6b6;
 }
 
-.flexbox-item-1 {
-    min-height: 100px;
-    
+.navbreak{
+    height: 450px;
+    background-color: mediumpurple;
 }
 
-.flexbox-item-2 {
-    min-height: 200px;
-    
-}
-
-.flexbox-item-3 {
-    min-height:400px;
-    
-}
 
