@@ -1,2 +1,33 @@
 Terminal command to create react app in selected folder
     npx create-react-app .
+
+
+Basic React Commands and message that you succesfully created react app: 
+
+Success! Created react-practice at C:\Users\Nitrogendragon\source\repos\LearnJPOnline\react-practice
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd C:\Users\Nitrogendragon\source\repos\LearnJPOnline\react-practice
+  npm start
+
+
+
+
+  /*This is JSx which is essentially reacts version of html
+    allows embedding components inside other components*/
+    <TodoList />
