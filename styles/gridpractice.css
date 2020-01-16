@@ -1,0 +1,96 @@
+html{
+    background-color: rgba(8, 8, 8, 0.808);
+}
+
+.grid-container {
+    /* by default this doesn't define any rows or columns
+    to make this become an actual grid is by defining specific columns or rows*/
+    display:grid;
+    /* define columns*/
+    /*grid-template-columns: 200px 250px;/* pixel based sizing*/
+    /*grid-template-columns: 2fr 1fr;/* fraction based sizing*/
+    grid-template-columns: repeat(4, 20%);/*easy way to say how many columns we want with this size*/
+    /*define rows*/
+    /*grid-template-rows: 200px 150px; /*pixel based sizing row 1 then row 2 */
+    grid-auto-rows: 150px;/*any rows that haven't been defined will be 150px tall so first will be 200px
+    then 150px from there-on*/
+    /*when we are going to have content which could overflow we can use minmax*/
+    grid-auto-rows: minmax(150px,auto);
+    /*spacing our rows and colummns*/
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    /* to set row and column to be the same gap use grid-gap: 10px*/
+    grid-gap: 20px;
+    /*allows you to create different strings for the areas you want your grid to take up*/
+    /* "header header" makes header grid-area take up first and second column*/
+    /* grid-template-areas: 
+        "header header"
+        "sidebar contentt"
+        "sidebar contentt" */
+
+}
+
+.grid-item {
+    background-color: rgba(92, 92, 218, 0.692);
+    border: 2px solid whitesmoke;
+}
+
+.grid-item-1 {
+    /* grid-area: header; */
+    grid-column-start: 1;/*indexing for columns and rows starts at 1, i know... that's difficult*/
+    grid-column-end: 3;/*each item starts at x and ends at x+1 so to span two columns we need to do x+2*/
+    grid-column-end: -1;/* goes all the way to the end of the column*/
+    grid-column: 1 / -1;/* shorthand version*/
+    grid-column: span 2; /*easy sizing without specifying specific start and end position*/
+}
+
+.grid-item-2 {
+    /* grid-area: sidebar; */
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-row:2 / 4;
+    grid-row: span 2;
+}
+
+.grid-item-3 {
+    /* grid-area: contentt; */
+}
+
+.grid-container-v2 {
+    display: grid;
+    grid-template-columns: 200px 250px;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 20px;
+    background-color: tomato;
+    /*contains our container and makes it move around
+    unlike flexbox you just use start or end to say put content at beginning or end (left or right)
+    also have stretch, space-around, space-evenly */
+    justify-content: start;
+    justify-content: stretch;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    justify-content: space-between;
+    justify-content: end;
+    justify-content: center;
+    /*to align our grid use align-content and again center, start, or end to align.
+    also have stretch , space-around, space-between, space-evenly.
+    this requires a grid height to work properly*/
+    height: 60vh;
+    align-content: end;
+    align-content: start;
+    align-content: stretch;/*stretches content vertically at the very least under these conditions*/
+    align-content: space-around; 
+    align-content: space-between;
+    align-content: center;
+
+    /*justifying and aligning items
+    by default they are set to stretch the entirety of their container
+    we can center, start, end, etc*/
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.grid-item-v2-1 {
+    align-self: start;
+    justify-self:center;
+}

@@ -1,0 +1,32 @@
+Model View Controller notes
+
+split large application into sections that have their own purpose
+
+Example: user is requesting a specific page from a server
+
+1. Request ---> Controller 
+    Controller handles entire request from the client and tells the rest of the server 
+    what to do witht he request. Acts as middle man, shouldn't contain very much code
+
+2. Controller  Get Data(from)--> Model
+    Model handles data logic of a request. 
+    Interacts with database and handles all the updating, saving, and deleting of the database
+    Controller should never directly interact with the data logic, 
+    Controller should only use Model to handle interactions and tells View what to do based on what
+        the model sends back to it, thus the next step
+
+3. Controller Get Presentation(from) ---> View
+    View is a template file that renders the data the based on what the controller sends it
+    View is dynamically rendered
+    View sends final presentation back to Controller 
+
+4. Controller Response(to) --> user
+    Controller then sends a Response back to the user based on what the View sent it.
+
+Note that the Model and View "NEVER" interact with one another
+Presentation and logic of data are completely seperated 
+
+
+TLD: Model handles all the data
+     View handles all the presentation
+     Controller tells the View and Model what to do.
