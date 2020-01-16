@@ -290,10 +290,12 @@ with flex boxes */
     border: 3px solid mediumvioletred;
     border-radius: 7%;
     text-align: center;
+    flex-direction: column;
 
 }
 
 .flexbox-vocab-item-word{
+    
     justify-content: left;
     align-items: flex-start;
     padding-left:10px;
@@ -317,9 +319,7 @@ with flex boxes */
     background-color: #c5b6b6;
 }
 
-.navbreak{
-    height: 450px;
-    background-color: mediumpurple;
+.small-text {
+    font-size: .5em;
 }
-
 
