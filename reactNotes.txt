@@ -31,3 +31,79 @@ We suggest that you begin by typing:
   /*This is JSx which is essentially reacts version of html
     allows embedding components inside other components*/
     <TodoList />
+
+
+
+With our EJS extension when in TodoList.js for example if we type: rfc
+it will create the following function for us.
+
+        import React from 'react'
+
+        export default function ToDoList() {
+            return (
+                <div>
+                    
+                </div>
+            )
+        }
+
+
+In general this EJS extension will be great for quick creates among other things I'm sure
+
+
+React Importing syntax:
+
+    import ToDoList from './ToDoList'
+
+Reacts useState() function returns an array thus we destructure that array
+and then set it equal to useState([<items>]) as seen below
+
+    const [todos, setTodos] = useState(['Todo 1', 'Todo 2'])
+
+
+Object Destructuring: ex: const [todos, setTodos] = useState(['Todo 1', 'Todo 2'])
+
+    The todos in the array represents every single one of our todos inside the todo state.
+    The setTodos is the function we call to update those todos. Note that this is a function it
+      just doesn't have its () .
+
+Props: <ToDoList  todos={todos}/>
+    Explanation: we are saying we have a prop (todos) on our ToDoList and we want to pass the ({todos})
+      variable to that prop (todos)
+
+  Passing to js object: ex <ToDoList  todos={todos}/>
+
+      Here we are literally passing the todos we made above to our ToDoList
+
+
+Defining text as JS code inside of html:
+  <div>
+    {todos.length}
+  </div>
+
+    here we have html div elements and within them we are referencing an array todos 
+      and getting its length. By putting it inside {} we are able to tell VSC that we are treating
+      this text as Javascript instead of html.
+
+  Javascript easy way to go through elements of an array and return them in our html:
+
+    todos.map(todo => {
+            return <Todo todo={todo} />
+        })
+
+      Takes our array todos and runs the .map() function on it which goes through each of our a todo's 
+        (todo) and returns a Todo element or component via Todo todo={todo} .
+
+
+useRef allows us to reference elements inside of our html by importing Reacting in the way shown here.
+
+    import React, { useState, useRef } from 'react';
+
+
+Random id generator terminal command:
+
+    npm i uuid
+
+How to import uuid into App.js:
+
+    import uuidv4 from 'uuid/v4'
