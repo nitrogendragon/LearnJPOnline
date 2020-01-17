@@ -1,0 +1,13 @@
+To get help enter:
+
+    code --help
+
+to change display language:
+
+    --locale <locale>	
+    Set the display language (locale) for the VS Code session. (for example, en-US or zh-TW)
+
+
+To easily select what folder/ file directory to be browsing in the terminal hover over the item in
+the VSC explorer, right click and scroll until you see the open in terminal option.. Click on it and 
+it will open in your terminal. (*Now you can run node on this damn folder/file without failures)
