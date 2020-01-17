@@ -1,0 +1,88 @@
+JSON: JavaScript Object Notation
+
+    Data representation Format
+    Commonly used for APIs and Configs
+    Lightweight and Easy to Read/Write
+    Integrates Easily with most languages beyond JavaScript
+
+Supports:
+
+    Strings "Hello World" "Kyle" "I"
+    Numbers 10 1.5 -30 1.2e10
+    Booleans true false
+    null nul
+    Arrays [1,2,3] ["Hello", "World]
+    Objects {"key": "value"} {"age": 30}
+
+JavaScript respond to array from JSON like it's a string:
+
+    use backticks to encapsulate the lines of code/JSON
+
+    `[
+        {
+            "name": "Big Corporation",
+            "numberOfEmployees": 10000,
+            "ceo": "Mary",
+            "rating": 3.6
+        },
+        {
+            "name": "Small Startup",
+            "numberOfEmployees": 3,
+            "ceo": null,
+            "rating": 4.3
+        }
+    ]`
+
+
+    Now it will respond to what was our array/JSON like its a string
+
+
+    If we want to then change it to an object type we can use JSON.parse(<var>) and it will
+        parse the data into an object for us that if we console.log(<var>) afterwords will show us an
+        object that is/has an array with two objects representing the company's data.
+
+
+        Now with it parsed we can treat it like normal code objects and do things like:
+
+            Console.log(<var>)[0].name
+            
+            The console ouput should be something like:
+
+                Big Corporation 
+
+    Last Notes: 
+
+        Converting JavaScript object into a string that can be passed to the server:
+
+            In order to make an object into a string do something like this:
+
+                let passableToServerVar = JSON.stringify(companies);
+
+                This will create a variable/object that is a string consisting of everything that was
+                in the companies object (that we made from our companies JSON). It will even hold formatting
+                which is great(at least in the console it will that is)
+
+                The result if you were to console.log(passableToServerVar) would be as follows
+
+                        [
+                    {
+                        "name": "Big Corporation",
+                        "numberOfEmployees": 10000,
+                        "ceo": "Mary",
+                        "rating": 3.6
+                    },
+                    {
+                        "name": "Small Startup",
+                        "numberOfEmployees": 3,
+                        "ceo": null,
+                        "rating": 4.3
+                    }
+                ]
+
+                And just to make sure it worked you could do type checking too:
+
+                Console.log(typeof(companies))
+
+                And the result  in our console after having stringified it should be:
+
+                string
