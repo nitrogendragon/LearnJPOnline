@@ -107,3 +107,10 @@ Random id generator terminal command:
 How to import uuid into App.js:
 
     import uuidv4 from 'uuid/v4'
+
+
+Useful app to install Axios:
+
+    npm i axios
+
+      Allows us to make asynchronous requests to an api such as PokeAPI
