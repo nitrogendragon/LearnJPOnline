@@ -1,11 +1,14 @@
 import React from 'react'
-
-export default function PokemonList({ pokemon}) {
+import './styles/pokemonlist.css'
+export default function PokemonList({pokemonZ}) {
     return (
-        <div>
-            {pokemon.map(p => (
-                <div key={p}>{p}</div>
+        <>
+        <div className="test-grid">
+            {pokemonZ.map(p => (
+                <div class="test-grid-item" key={p}>{p}</div>
             ))}
         </div>
+        <div></div>
+        </>
     )
 }
