@@ -1,16 +1,17 @@
 import React from 'react'
 import '../Styles/admin.css'
-export default function ContactCard() {
+export default function ContactCard(props) {
     const h3Style = {
-        padding: "20%"
+        paddingLeft: "14%",
+        
     }
 
     return (
         <div className="contact-card">
-            <img style={h3Style}src="http://placekitten.com/300/200"/>
-            <h3>Mr. Whiskerson</h3>
-            <p>Phone: (212) 555-5555</p>
-            <p>Email: mr.whiskaz@catnap.com</p>
+            <img style={{width: "50%"}} src= {props.contact.imgUrl}/>
+            <h3 style={h3Style}>{props.contact.name}</h3>
+            <p>Phone: {props.contact.phone}</p>
+            <p>Email: {props.contact.email}</p>
         </div>
     )
 }
