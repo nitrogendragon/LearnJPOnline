@@ -37,7 +37,7 @@
 }
 
 
-.contact-card {
+.contact-card, .jokes {
     display: flex;
     flex-direction: column;
     width: 50%;
