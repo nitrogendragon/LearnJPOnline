@@ -33,6 +33,12 @@ export default function App() {
         color: "gray",
         border: "2px solid teal"
     }
+
+
+
+
+
+
     return (
         <div>
             {/* for inline styling we make an object via cbs {} and then wrap our style in curly braces. 

@@ -4,6 +4,8 @@ import App from "./Components/App"
 import App2 from "./Components/App2"
 import App3 from "./Components/App3/App3"
 import App4 from "./Components/App4/App4"
+import App5 from "./Components/App5/App5"
+import StateApp from "./Components/StateApp/StateApp"
 
 ReactDOM.render(
     <><App /></>, document.getElementById('root'));

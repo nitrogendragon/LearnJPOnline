@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TodoListItems() {
+export default function TodoListItems(props) {
 const todoListItemStyle = {
     display: "flex",
     justifyContent: "center",
@@ -16,7 +16,7 @@ const todoListItemStyle = {
 
     return (
         <div style={todoListItemStyle}>
-            <input type="checkbox"></input> Clean up
+            <input type="checkbox" checked= {props.todos.completed}></input> {props.todos.task}
         </div>
     )
 }
