@@ -13,10 +13,14 @@ const todoListItemStyle = {
 }
 
 
+    function UodateCheckBox(){
+
+    }
 
     return (
         <div style={todoListItemStyle}>
-            <input type="checkbox" checked= {props.todos.completed}></input> {props.todos.task}
+            <input onChange={()=>console.log("clicked")} type="checkbox" 
+            checked= {props.todos.completed}></input> {props.todos.task}
         </div>
     )
 }

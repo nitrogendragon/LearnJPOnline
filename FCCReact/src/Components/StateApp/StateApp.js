@@ -19,6 +19,7 @@ export default class StateApp extends Component {
                 {/* We can create an instance of a class object using <ObjectName /> like a normal prop */}
                 <StatePractice />
                 <StatePracticeRedo />
+                <StatePracticeRedo />
             </div>
         )
     }

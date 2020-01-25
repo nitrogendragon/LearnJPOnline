@@ -8,5 +8,5 @@ import App5 from "./Components/App5/App5"
 import StateApp from "./Components/StateApp/StateApp"
 
 ReactDOM.render(
-    <><App /></>, document.getElementById('root'));
+    <><StateApp /></>, document.getElementById('root'));
     //MyOrderedList(), document.getElementById('root')); //This is also valid though probably not bprac.
