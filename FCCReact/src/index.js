@@ -8,6 +8,7 @@ import App5 from "./Components/App5/App5"
 import StateApp from "./Components/StateApp/StateApp"
 import LifeCycleApp from "./Components/LifeCycleApp/LifeCycleApp"
 import DFA from "./Components/DataFetchApp/DataFetchApp"
+import FormsApp from "./Components/FormsApp/FormsApp"
 ReactDOM.render(
-    <><DFA /></>, document.getElementById('root'));
+    <><FormsApp /></>, document.getElementById('root'));
     //MyOrderedList(), document.getElementById('root')); //This is also valid though probably not bprac.
