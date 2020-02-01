@@ -68,7 +68,7 @@ Object Destructuring: ex: const [todos, setTodos] = useState(['Todo 1', 'Todo 2'
       just doesn't have its () .
 
 Props: <ToDoList  todos={todos}/>
-    Explanation: we are saying we have a prop (todos) on our ToDoList and we want to pass the ({todos})
+    Explanation: we are saying we have a prop (todos) in our ToDoList and we want to pass the ({todos})
       variable to that prop (todos)
 
   Passing to js object: ex <ToDoList  todos={todos}/>
@@ -95,7 +95,7 @@ Defining text as JS code inside of html:
         (todo) and returns a Todo element or component via Todo todo={todo} .
 
 
-useRef allows us to reference elements inside of our html by importing Reacting in the way shown here.
+useRef allows us to reference elements inside of our html by importing React in the way shown here.
 
     import React, { useState, useRef } from 'react';
 

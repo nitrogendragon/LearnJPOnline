@@ -10,6 +10,7 @@ import LifeCycleApp from "./Components/LifeCycleApp/LifeCycleApp"
 import DFA from "./Components/DataFetchApp/DataFetchApp"
 import FormsApp from "./Components/FormsApp/FormsApp"
 import FormsPracticeApp from "./Components/FormsApp/FormsPracticeApp"
+import MemeApp from "./MemeGenerator/App"
 ReactDOM.render(
-    <><FormsPracticeApp /></>, document.getElementById('root'));
+    <><MemeApp/></>, document.getElementById('root'));
     //MyOrderedList(), document.getElementById('root')); //This is also valid though probably not bprac.

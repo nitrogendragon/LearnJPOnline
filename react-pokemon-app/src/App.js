@@ -31,12 +31,7 @@ function App() {
   }, [currentPageUrl])/** every time CurrentPageUrl changes we re-render otherwise we never re-render*/
 
 
-  //Grab specific Pokemon's information
-  // useEffect(() => {
-  //   setLoading(true)
-  //   let cancel
-  //   axios.get()
-  // })
+
 
 
   function gotoNextPage() {
