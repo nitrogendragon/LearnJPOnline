@@ -1,0 +1,49 @@
+.body {
+    margin: 0;
+}
+
+.flexbox-container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center ; */
+    background-color: #beaa36;
+
+}
+.flexbox-vocab-container{
+    margin-top:7em;
+    width: 100%;
+    height:800px;
+    display: flex;
+    justify-content: left;
+    /* align-items: flex-start ; */
+    background-color: #beaa36;
+}
+
+.flexbox-vocab-item{
+    display: flex;
+    margin:10px;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 400px;
+    font-size: 2em;
+    background-color: mediumturquoise;
+    border: 3px solid mediumvioletred;
+    border-radius: 7%;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.flexbox-vocab-item-word{
+    
+    justify-content: left;
+    align-items: flex-start;
+    padding-left:10px;
+    padding-top: 20px;
+
+}
+
+.flexbox-vocab-item-meaning{
+
+}

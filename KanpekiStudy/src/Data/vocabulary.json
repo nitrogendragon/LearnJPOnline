@@ -1,0 +1,23 @@
+
+[
+    {
+        "word": "konnichiwa",
+        "meanings": ["hello", "good day", "good afternoon"],
+        "usage": "A basic greeting used during the daytime",
+        "img": "",
+        "hiragana": "こんにちは",
+        "katakana": "",
+        "kanji": "今日わ",
+        "exampleSentence": "Hello Mr. Tanaka ",
+        "exampleSentenceJP": "こんにちは田中さん",
+        "exampleSentenceJPNoKanji": "こんいちわ た なか さん",
+        "vocabularyQuestion": "You see someone you know in the afternoon, what should you say?",
+        "vocabularyQuestionEngAnswer": "konnichiwa",
+        "vocabularyQuestionJPAnswer": "こんにちわ",
+        "grammarType": "noun"
+
+    },
+    {
+        "word": "hello"
+    }
+]
